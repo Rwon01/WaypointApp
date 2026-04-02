@@ -10,7 +10,7 @@ export default function App() {
   const [form, setForm] = useState({ name: "", x: "", z: "" , color : "#ff0000"});
   
 useEffect(() => {
-  fetch('/waypoints')
+  fetch('157.151.176.57/waypoints')
     .then(res => res.json())
     .then(data => {
       console.log(data); // check if 'z' exists
