@@ -8,9 +8,12 @@ export default function App() {
   const [waypoints, setWaypoints] = useState([]);
   const [selected, setSelected] = useState(null);
   const [form, setForm] = useState({ name: "", x: "", z: "" , color : "#ff0000"});
-  
+
+  const URL = "/waypoints"
+
+
 useEffect(() => {
-  fetch('/waypoints')
+  fetch(URL)
     .then(res => res.json())
     .then(data => {
       console.log(data); // check if 'z' exists
@@ -20,7 +23,7 @@ useEffect(() => {
 }, []);
 const handleAdd = async () => {
   try {
-    const res = await fetch("http://localhost:8080/waypoints", {
+    const res = await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -46,7 +49,7 @@ const handleAdd = async () => {
 };
 const handleDelete = async (id) => {
   try {
-    const res = await fetch(`http://localhost:8080/waypoints/${id}`, {
+    const res = await fetch(`${URL}/${id}`, {
       method: "DELETE"
     });
 
