@@ -12,6 +12,7 @@ const WP_URL       = "/waypoints";
 const LOD_SIZES = [1024, 256, 64, 16]; // px
 
 // Pick the best LOD: find the smallest canvas whose size >= rendered pixel size
+//test
 function pickLod(tile, screenPixels) {
   for (let i = LOD_SIZES.length - 1; i >= 0; i--) {
     if (LOD_SIZES[i] >= screenPixels * 0.5) return tile.lods[i];
