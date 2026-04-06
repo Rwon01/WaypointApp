@@ -6,6 +6,5 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     outDir: 'backend/src/main/resources/static',
-    emptyOutDir: true,
   },
 })
