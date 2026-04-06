@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class WaypointServiceImpl implements WaypointService {
-
+    
     private final WaypointRepository waypointRepository;
     private final WaypointMapper waypointMapper;
 
