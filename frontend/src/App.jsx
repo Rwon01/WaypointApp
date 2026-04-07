@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card, { CardContent } from "./components/Card";
 import MapArea from "./components/MapArea";
 import MapExplorer from "./components/MapExplorer";
-import LoginPage from "./components/LoginPage";
+import LoginPage from "./components/Loginpage";
 import { CirclePicker } from "react-color";
 import { isLoggedIn, clearToken, authFetch } from "./components/auth";
 
